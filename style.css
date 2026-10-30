@@ -1,0 +1,192 @@
+
+/* ==========================================
+   OPPORTUNITYRESCUE AI — PREMIUM DARK THEME
+   ========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg: #090d18;
+    --surface: #111827;
+    --surface-light: #182238;
+    --border: rgba(148, 163, 184, 0.14);
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+    --blue: #648cff;
+    --violet: #a78bfa;
+    --green: #34d399;
+}
+
+/* Main application */
+.stApp {
+    background:
+        radial-gradient(ellipse at 15% 0%, rgba(75, 95, 190, 0.16), transparent 35%),
+        radial-gradient(ellipse at 90% 15%, rgba(139, 92, 246, 0.10), transparent 30%),
+        var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+}
+
+/* Hide Streamlit default branding */
+#MainMenu, footer {
+    visibility: hidden;
+}
+
+/* Main content */
+.block-container {
+    max-width: 1450px;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #111827, #0b1120);
+    border-right: 1px solid var(--border);
+}
+
+section[data-testid="stSidebar"] * {
+    color: var(--text);
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: var(--text) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.5px;
+}
+
+/* Body text */
+p, label, span {
+    color: var(--text);
+}
+
+/* Metric cards */
+div[data-testid="stMetric"] {
+    background: linear-gradient(145deg, #172238, #111827);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+    transition: transform 0.25s ease, border-color 0.25s ease;
+    animation: fadeUp 0.6s ease both;
+}
+
+div[data-testid="stMetric"]:hover {
+    transform: translateY(-4px);
+    border-color: rgba(100, 140, 255, 0.55);
+}
+
+div[data-testid="stMetricValue"] {
+    color: #ffffff;
+    font-weight: 800;
+}
+
+/* Buttons */
+.stButton > button,
+.stDownloadButton > button {
+    background: linear-gradient(100deg, #536dfe, #8b5cf6);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0.55rem 1.2rem;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.stButton > button:hover,
+.stDownloadButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.35);
+    color: white;
+}
+
+/* Input fields */
+.stTextInput input,
+.stNumberInput input,
+.stDateInput input,
+.stTextArea textarea {
+    background: #151f32;
+    color: white;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+}
+
+/* Select boxes */
+.stSelectbox div[data-baseweb="select"] > div {
+    background: #151f32;
+    border-color: var(--border);
+    border-radius: 9px;
+}
+
+/* Expanders */
+div[data-testid="stExpander"] {
+    background: rgba(20, 30, 49, 0.8);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+}
+
+/* Tabs */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+.stTabs [data-baseweb="tab"] {
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.stTabs [aria-selected="true"] {
+    color: #8ba5ff !important;
+    border-bottom-color: #8ba5ff !important;
+}
+
+/* Data tables */
+div[data-testid="stDataFrame"] {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Alerts */
+div[data-testid="stAlert"] {
+    border-radius: 12px;
+}
+
+/* Smooth entrance animations */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1, h2, h3 {
+    animation: fadeUp 0.6s ease both;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #090d18;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #35415c;
+    border-radius: 10px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .block-container {
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+*.db
+*.sqlite
+.env
+app_backup*.py
+*.log
+.streamlit/secrets.toml
